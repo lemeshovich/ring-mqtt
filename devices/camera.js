@@ -40,7 +40,7 @@ class Camera extends RingPolledDevice {
                     : true,
                 intervalDuration: savedState?.snapshot?.intervalDuration
                     ? savedState.snapshot.intervalDuration
-                    : (this.device.operatingOnBattery) ? 600 : 30,
+                    : (this.device.operatingOnBattery) ? 600 : 900,
                 intervalTimerId: null,
                 currentImage: null,
                 timestamp: null
@@ -318,7 +318,7 @@ class Camera extends RingPolledDevice {
                 }
             } else {
                 // For wired cameras default to 30 seconds o
-                this.data.snapshot.intervalDuration = 30
+                this.data.snapshot.intervalDuration = 900
             }
         }
     }
